@@ -3,8 +3,7 @@ usng gramine shielded containers
 
 
 ```
-git clone https://github.com/gramineproject/gsc && cs gsc
-enclave-key.pem
+git clone https://github.com/gramineproject/gsc && cd gsc
 openssl genrsa -3 -out enclave-key.pem 3072
 docker build -t tdx-smtp .
 ./gsc build --insecure-args tdx-smtp tdx-smtp.manifest
